@@ -1,0 +1,13 @@
+body {
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.p-5.mb-4.bg-body-tertiary.rounded-3{
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+h1{
+    color: #2c3e50;
+}
