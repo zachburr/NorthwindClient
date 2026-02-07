@@ -24,6 +24,8 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
             defer
         </script>
+    <!-- client js -->
+    <script src="discount.js"></script>
 
 
 </head>
@@ -71,6 +73,7 @@
                     <button class="btn btn-outline-primary" type="submit"><i class="bi bi-search"></i><span
                             class="visually-hidden">Search</span></button>
                 </form>
+
             </div>
         </div>
     </nav>
@@ -78,8 +81,55 @@
     <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Welcome to Northwind</h1>
-            <p class="col-md-8 fs-4">Home of high quality foods and beverages!</p> 
+            <p class="col-md-8 fs-4">Home of high quality foods and beverages!</p>
             <button class="btn btn-primary btn-lg" type="button">More Info</button>
+            <div class="row p-2 m-2" id="discount-row">
+                <div class="col px-2 py-4">
+                    <h3>Tis the seasoning</h3>
+                    <div class="mb-4">
+                        Order today! Save 12.5% on Chef Anton's Italian Seasoning.
+                        You don't want to make Chef Anton mad, do you?
+                    </div>
+                    <i>Discount expires: 2/25/2025</i><br />
+                    <i class="bi bi-receipt"></i> <a href="#" class="discount"
+                        data-product="Chef Anton's Italian Seasoning" data-title="Tis the seasoning"
+                        data-code="1111">Discount Code</a>
+                </div>
+                <div class="col px-2 py-4">
+                    <h3>Pizza! Pizza! Pizza!</h3>
+                    <div class="mb-4">
+                        Order today! Save 10% on Zach's pizza sauce 
+                    </div>
+                    <i>Discount expires: 2/30/2025</i><br />
+                    <i class="bi bi-receipt"></i> <a href="#" class="discount"
+                        data-product="Zach's pizza sauce" data-title="Pizza! Pizza! Pizza!"
+                        data-code="2222">Discount Code</a>
+                </div>
+                <div class="col px-2 py-4">
+                    <h3>Dry January Deals</h3>
+                    <div class="mb-4">
+                        Order today! Save 20% on John's N/A Beer
+                    </div>
+                    <i>Discount expires: 2/1/2026</i><br />
+                    <i class="bi bi-receipt"></i> <a href="#" class="discount"
+                        data-product="John's N/A Beer" data-title="Dry January Deals"
+                        data-code="3333">Discount Code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- toast -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+            data-bs-autohide="false">
+            <div class="toast-header">
+                <strong class="me-auto" id="product">Product</strong>
+                <small class="text-body-secondary" id="title">discount title</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body" id="code">
+                Discount Code: 1234
+            </div>
         </div>
     </div>
 </body>
